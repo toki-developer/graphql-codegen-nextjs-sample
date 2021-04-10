@@ -5,7 +5,7 @@ module.exports = {
       },
       "src/apollo/client-schema.graphql",
     ],
-    documents: ["src/{components,pages}/**/*.{ts,tsx}"],
+    documents: ["src/pages/**/*.{ts,tsx}"],
     overwrite: true,
     generates: {
       "src/apollo/graphql.tsx": {

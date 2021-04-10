@@ -1,8 +1,11 @@
+import { gql } from 'graphql-tag';
 import Head from 'next/head'
+import { useCountriesQuery } from "src/apollo/graphql";
 import styles from '../styles/Home.module.css'
 
-
 const Home = () => {
+  const { data, loading, error } = useCountriesQuery()
+  data?.countries.map((item) => console.log(item));
   return (
     <div className={styles.container}>
       <Head>
@@ -66,3 +69,14 @@ const Home = () => {
 }
 
 export default Home;
+
+gql`
+query Countries {
+  countries {
+    code
+    name
+    emoji
+  }
+}
+`;
+
