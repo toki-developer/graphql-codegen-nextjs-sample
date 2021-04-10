@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { FC } from 'react'
 import styles from '../styles/Home.module.css'
+
 
 const Home = () => {
   return (
